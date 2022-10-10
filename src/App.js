@@ -12,7 +12,13 @@ function App() {
       element: <Main></Main>,
       children:[
         {
+          path:'/',
+          loader:() => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <Topics></Topics>
+        },
+        {
           path:'/topics',
+          loader:() => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Topics></Topics>
         },
         {
