@@ -53,6 +53,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
+      <footer className='my-10'>Copyright © 2022 SojeeB Islam . All right reserved</footer>
     </div>
   );
 }
