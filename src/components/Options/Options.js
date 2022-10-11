@@ -4,11 +4,19 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const Options = ({option}) => {
-    
+const Options = ({ option, correctAnswer }) => {
 
-    const notify= () =>{
-        toast('Correct Answer')
+
+
+    const notify = () => {
+
+        if (option === correctAnswer) {
+
+            toast('Correct Answer')
+        }
+        else {
+            toast('Incorrect Answer')
+        }
     }
 
     return (
@@ -18,12 +26,13 @@ const Options = ({option}) => {
 
                 <label className='mr-2 '>
                     <input onClick={notify} type="radio" name="radio" />
-                        <span class="check"></span>
+                    
                 </label>
 
                 {option}</h1>
-            
-                <ToastContainer/>
+
+            <ToastContainer
+                theme="dark" position="top-left" autoClose={3000} />
         </div>
     );
 };
