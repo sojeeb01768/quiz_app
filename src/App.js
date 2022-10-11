@@ -4,6 +4,7 @@ import Main from './layouts/Main';
 import Topics from './components/Topics/Topics'
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import Questions from './components/Questions/Questions';
 
 function App() {
   const router = createBrowserRouter([
@@ -28,8 +29,20 @@ function App() {
         {
           path:'/blog',
           element: <Blog></Blog>
+        },
+        {
+          path:'/topic/:topicId',
+          loader: async ({params}) => {
+              // console.log(params.topicId);
+              return fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`)
+          },
+          element: <Questions></Questions>
         }
       ]
+    },
+    {
+      path:'*',
+      element: <div>This route not found 404</div>
     }
   ])
   return (
