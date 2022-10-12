@@ -5,15 +5,15 @@ import Chart from '../Chart/Chart';
 const Statistics = () => {
     const allData = useLoaderData();
 
-    console.log(allData);
+    console.log(allData.data);
     return (
         <div>
 
             {
-                allData.data.map(data => <Chart
-                    key={data.id}
-                    data={data}
-                ></Chart>)
+                allData.data.map(smallData => <Chart 
+                key={smallData.id}
+                smallData={smallData}
+                ></Chart> )
             }
         </div>
     );
