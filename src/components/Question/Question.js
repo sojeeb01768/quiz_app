@@ -20,9 +20,9 @@ const Question = ({ questionSet }) => {
                 <h2 className='mb-10 text-teal-600 text-xl font-semibold'>
                     {question}
                 </h2>
-                <FontAwesomeIcon onClick={answer} className='mt-2 ml-3' icon={faEye}></FontAwesomeIcon>
+                <FontAwesomeIcon onClick={() => answer()} className='mt-2 ml-3' icon={faEye}></FontAwesomeIcon>
                 <ToastContainer
-                    theme="light" position="top-left" autoClose={3000}
+                    theme="dark" position="top-left" autoClose={3000}
                 ></ToastContainer>
             </div>
 

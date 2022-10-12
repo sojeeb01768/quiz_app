@@ -31,6 +31,8 @@ const Options = ({ option, correctAnswer }) => {
 
                 {option}</h1>
 
+                
+
             <ToastContainer
                 theme="dark" position="top-left" autoClose={3000} />
         </div>
