@@ -1,39 +1,28 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
 
 
 
-const Chart = ({ smallData }) => {
-    const { name, total } = smallData;
-    console.log(smallData);
+const Chart = ({ data }) => {
+
+    // console.log(data);
 
 
     return (
-        <div className='my-10'>
-            <h1>Chart Graph</h1>
-            <LineChart
-                width={400}
-                height={200}
-                data={smallData}
-                margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                }}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
+        <div className='my-10 '>
+            <h1 className='text-3xl my-10 font-bold'>Chart Graph of total quiz</h1>
+
+           <ResponsiveContainer className='m-auto' height={300} width={500}>
+           <BarChart className='m-auto'  data={data}>
+                <Bar type="monotone" dataKey="total" fill="#8884d8" />
+                <XAxis dataKey='name'></XAxis>
+                <YAxis dataKey="total"></YAxis>
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey={total} stroke="#8884d8" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey={name} stroke="#82ca9d" />
-            </LineChart>
-            <h1>{name}</h1>
-            <h1>{total}</h1>
+            </BarChart>
+           </ResponsiveContainer>
         </div>
     );
 };

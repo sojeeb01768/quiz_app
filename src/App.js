@@ -16,7 +16,7 @@ function App() {
       path: '/',
       element: <Main></Main>,
       children: [
-        
+
         {
           path: '/',
           loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
@@ -52,13 +52,13 @@ function App() {
     },
     {
       path: '*',
-      element: <div>This route not found 404</div>
+      element: <div className='text-4xl mt-20 font-bold'>This route not found- Error: 404</div>
     }
   ])
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
-      <footer className='my-10'>Copyright © 2022 SojeeB Islam . All right reserved</footer>
+      <footer className='my-10 mb-0'>Copyright © 2022 SojeeB Islam . All right reserved</footer>
     </div>
   );
 }

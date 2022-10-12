@@ -20,7 +20,7 @@ const Options = ({ option, correctAnswer }) => {
     }
 
     return (
-        <div className='flex justify-center align-center'>
+        <div  className='flex justify-center align-center '>
 
             <h1 className='border-2  w-5/6 m-auto my-2 p-4 rounded-md text-blue-500 font-semibold'>
 
