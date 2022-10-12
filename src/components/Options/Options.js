@@ -22,7 +22,7 @@ const Options = ({ option, correctAnswer }) => {
     return (
         <div className='flex justify-center align-center'>
 
-            <h1 className='border-2  w-/6  my-2 p-4 rounded-md text-blue-500 font-semibold'>
+            <h1 className='border-2  w-4/6  my-2 p-4 rounded-md text-blue-500 font-semibold'>
 
                 <label className='mr-2 '>
                     <input onClick={notify} type="radio" name="radio" />

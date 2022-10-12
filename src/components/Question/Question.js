@@ -22,7 +22,7 @@ const Question = ({ questionSet }) => {
             </h2>
             <FontAwesomeIcon onClick={answer} className='mt-2 ml-3'  icon={faEye}></FontAwesomeIcon>
             <ToastContainer 
-             theme="light" position="top-right" autoClose={3000}
+             theme="light" position="top-left" autoClose={3000}
              ></ToastContainer>
             </div>
 
