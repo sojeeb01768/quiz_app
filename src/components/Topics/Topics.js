@@ -10,7 +10,7 @@ const Topics = () => {
     return (
 
         <div >
-            <div className='m-auto  my-5 p-5 shadow-lg flex bg-gray-300 mx-5 px-50 rounded-lg'>
+            <div data-aos="zoom-out-up" className='m-auto  my-5 p-5 shadow-lg flex bg-gray-300 mx-5 px-50 rounded-lg'>
 
                 <img className='w-2/6 h-3/6 rounded-lg' src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/03/24185535/Online-Learning.jpg" alt="" />
 
@@ -23,7 +23,7 @@ const Topics = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 sm:grid-cols-4 mx-10 shadow-md p-5'>
+            <div data-aos="zoom-out-down" className='grid grid-cols-1 sm:grid-cols-4 mx-10 shadow-md p-5'>
                 {
                     topics.data.map(topic => <Topic
                         key={topic.id}
